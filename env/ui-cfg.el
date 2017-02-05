@@ -42,7 +42,11 @@
 ;; don't pop up font menu
 (global-set-key (kbd "s-t") '(lambda () (interactive)))
 
-;; theme
+;; GUI theme
 (use-package dracula-theme
   :init (progn (load-theme 'dracula t))
   :ensure t)
+
+;; terminal theme
+(if (not (display-graphic-p))
+    (load-theme 'zenburn t))

@@ -57,9 +57,11 @@
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; set warning color
-(set-face-attribute 'flycheck-warning nil
-                    :foreground "yellow"
-                    :background "red")
+;; (cw|2.5.2017) actually this is p distracting, maybe softer
+;; colors in the future...
+;; (set-face-attribute 'flycheck-warning nil
+;;                     :foreground "yellow"
+;;                     :background "red")
 
 ;; regexp-builder tweaks
 (use-package re-builder :ensure t)
