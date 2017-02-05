@@ -1,6 +1,6 @@
-# @aguestuser's emacs config
+# Emacs Configuration
 
-__Notes:__
+**Notes:**
 
 * this config assumes Prelude installed and configured in `~/.emacs.d/init.el`
 * it will work on OSX or Linux

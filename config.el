@@ -10,6 +10,7 @@
 (load "navigation-cfg.el")
 (load "shell-cfg.el")
 (load "ui-cfg.el")
+(load "on-start-cfg.el")
 
 ;;;;;;;;;;;
 ;; langs ;;
@@ -22,6 +23,7 @@
 (load "markdown-cfg.el")
 (load "elisp-cfg.el")
 (load "python-cfg.el")
+(load "tex-cfg.el")
 
 ;;;;;;;;;;;;;
 ;; program ;;
@@ -30,3 +32,4 @@
 (add-to-list 'load-path "~/.emacs.d/personal/program")
 (load "magit-cfg.el")
 (load "notmuch-cfg.el")
+(load "matrix-cfg.el")

@@ -32,3 +32,9 @@
 
 ;; No need for ~ files when editing
 (setq create-lockfiles nil)
+
+;; set default mode in term-mode to line-mode
+(defun set-default-term-line-mode (&rest ignored)
+  (term-line-mode))
+(advice-add 'ansi-term :after #'set-default-term-line-mode)
+(advice-add 'term :after #'set-default-term-line-mode)

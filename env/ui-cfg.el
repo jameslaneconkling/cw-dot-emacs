@@ -6,6 +6,9 @@
 (use-package transpose-frame :ensure t)
 (require 'transpose-frame)
 
+;; turn off line wrapping
+(set-default 'truncate-lines t)
+
 ;; line numbering
 (global-linum-mode)
 (column-number-mode)
@@ -43,15 +46,3 @@
 (use-package dracula-theme
   :init (progn (load-theme 'dracula t))
   :ensure t)
-
-
-;;;;;;;;;;;;;;;;;;;
-;; Dracula Theme ;;
-;;;;;;;;;;;;;;;;;;;
-
-;; manually reset background, linum, and lin, highlight indent-face 
-(add-to-list 'default-frame-alist '(background-color . "#262626"))
-(set-face-background 'linum "#262626")
-(set-face-background 'hl-line "#3e4446")
-(set-face-background 'mode-line "#875faf")
-(set-face-background 'modeline-inactive "#5f5f87")

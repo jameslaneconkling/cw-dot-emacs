@@ -112,10 +112,10 @@
 (require 'react-snippets)
 
 ;;works:
-(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
 (add-hook 'js2-jsx-mode-hook
           (lambda ()
-            (when (equal web-mode-content-type "jsx")
+            (when (equal web-mode-content-type "js")
               (flycheck-select-checker 'javascript-eslint)
               (flycheck-mode)
               (yas-minor-mode)

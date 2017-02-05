@@ -35,6 +35,9 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.c/ac-dict")
 (ac-config-default)
 
+;; fixme mode
+(use-package fixme-mode :ensure t)
+
 (use-package company :ensure t)
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -53,6 +56,10 @@
 ;; syntax-checking
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+;; set warning color
+(set-face-attribute 'flycheck-warning nil
+                    :foreground "yellow"
+                    :background "red")
 
 ;; regexp-builder tweaks
 (use-package re-builder :ensure t)

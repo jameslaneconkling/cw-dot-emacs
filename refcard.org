@@ -1,0 +1,31 @@
+#+TITLE: Emacs Reference Card
+#+AUTHOR: Connor Walsh
+
+** General
+*** Select to Next Word `M-@`
+
+** Org-Mode
+*** Expand context around point `TAB`
+*** Mark a TODO item as DONE `C-c C-t`
+
+** Python-Mode
+*** Execute current buffer `C-c C-c`
+
+** Go-Mode
+*** Go to definition `M-.`
+*** Go back from definition `M-,`
+*** Pull up godef `M-return`
+
+** Dired-Mode
+*** Enter dired `C-x d`
+*** Mark file `m`
+*** Mark for deletion `d`
+*** Execute `x`
+
+** Magit
+*** Enter magit-status buffer `C-x g`
+*** Show git log graph `l l`
+*** Stage changes `s`
+*** Commit changes `c c`
+*** Push changes `P p`
+*** Enter EDiff mode within magit diff `e`
