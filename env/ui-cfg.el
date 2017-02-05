@@ -43,9 +43,10 @@
 (global-set-key (kbd "s-t") '(lambda () (interactive)))
 
 ;; GUI theme
-(use-package dracula-theme
-  :init (progn (load-theme 'dracula t))
-  :ensure t)
+(if (display-graphic-p)
+    (use-package dracula-theme
+      :init (progn (load-theme 'dracula t))
+      :ensure t))
 
 ;; terminal theme
 (if (not (display-graphic-p))
