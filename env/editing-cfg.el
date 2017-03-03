@@ -69,7 +69,6 @@
 (setq reb-re-syntax 'string)
 
 ;; tern (for autocomplete)
-
 (use-package tern :ensure t)
 (use-package tern-auto-complete :ensure t)
 

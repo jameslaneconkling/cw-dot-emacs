@@ -4,6 +4,9 @@
 ** General
 *** Select to Next Word `M-@`
 
+** Helm Projectile
+*** Fuzzy find within a project `C-x p`
+
 ** Org-Mode
 *** Expand context around point `TAB`
 *** Mark a TODO item as DONE `C-c C-t`
