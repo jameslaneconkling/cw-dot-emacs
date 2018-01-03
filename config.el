@@ -5,6 +5,7 @@
 ;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/personal/env")
+(load "kbd-cfg.el")
 (load "package-cfg.el")
 (load "editing-cfg.el")
 (load "navigation-cfg.el")
@@ -24,6 +25,9 @@
 (load "elisp-cfg.el")
 (load "python-cfg.el")
 (load "tex-cfg.el")
+(load "forth-cfg.el")
+(load "asm-cfg.el")
+(load "brainfuck-cfg.el")
 
 ;;;;;;;;;;;;;
 ;; program ;;

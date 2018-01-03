@@ -43,11 +43,20 @@
 (global-set-key (kbd "s-t") '(lambda () (interactive)))
 
 ;; GUI theme
-(if (display-graphic-p)
-    (use-package dracula-theme
-      :init (progn (load-theme 'dracula t))
-      :ensure t))
+(use-package dracula-theme
+  :init (progn (load-theme 'dracula t))
+  :ensure t)
 
-;; terminal theme
-(if (not (display-graphic-p))
-    (load-theme 'zenburn t))
+;; use the below code ONLY if you want different behavior
+;; when opening emacs from within a windowed system or a
+;; terminal. Since I always want the same behavior, I always
+;; load the Dracula theme (above).
+;;
+;; (if (display-graphic-p)
+;;     (use-package dracula-theme
+;;       :init (progn (load-theme 'dracula t))
+;;       :ensure t))
+;;
+;; ;; terminal theme
+;; (if (not (display-graphic-p))
+;;     (load-theme 'zenburn t))

@@ -1,7 +1,7 @@
 ;; ~/.emacs.d/personal/lang/go-cfg.el
 
 ;; set my $GOPATH
-(setenv "GOPATH" "/Users/c/Code/Go")
+(setenv "GOPATH" "/home/c/code/go")
 
 ;; note: in order for go-autocomplete to work properly, we need to
 ;; have the `gocode' binary installed in our $GOPATH/bin.

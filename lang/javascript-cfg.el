@@ -1,18 +1,25 @@
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; javascript mode ;;
+;; Javascript Mode ;;
 ;;;;;;;;;;;;;;;;;;;;;
 
 (use-package nodejs-repl :ensure t) ;; node repl
 (use-package rjsx-mode :ensure t) ;; new and improved major mode for jsx
 (use-package js-comint :ensure t) ;; run js in inferior process window
 (use-package flycheck-flow :ensure t) ;; flow integration w/ flycheck
+(use-package js-doc :ensure t) ;; javascript JSDOC
 ;; (use-package react-snippets :ensure t)
 ;; (use-package ac-js2 :ensure t)
-;; ;; (use-package web-mode :ensure t)
+;; (use-package web-mode :ensure t)
 
 ;; use rjsx-mode with .js files
 (add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
+
+;; enable JSDOC support when in js2-mode
+(add-hook 'rjsx-mode-hook
+          #'(lambda ()
+              (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
+              (define-key js2-mode-map "@" 'js-doc-insert-tag)))
 
 ;; Note: since rjsx-mode is an extension of js2-mode, we can still
 ;; set js2-mode variables
@@ -30,7 +37,7 @@
 (setq-default js2-global-externs '("module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
 
 ;; auto-completion
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+;; (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; disable syntax checking in js2-mode
 (setq-default js2-mode-show-parse-errors nil)

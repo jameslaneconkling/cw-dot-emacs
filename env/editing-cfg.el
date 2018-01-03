@@ -41,10 +41,6 @@
 (use-package company :ensure t)
 (add-hook 'after-init-hook 'global-company-mode)
 
-(use-package tern :ensure t)
-(use-package tern-auto-complete :ensure t)
-(use-package company-tern :ensure t)
-
 ;; snippets
 (use-package yasnippet :ensure t)
 (require 'yasnippet)
@@ -68,9 +64,17 @@
 (require 're-builder)
 (setq reb-re-syntax 'string)
 
-;; tern (for autocomplete)
+;; rainbow-mode for highlighting hexidecimal/rgb color strings with their color.
+(use-package rainbow-mode :ensure t)
+(add-hook 'js-mode-hook (lambda () (rainbow-mode 1)))
+(add-hook 'web-mode-hook (lambda () (rainbow-mode 1)))
+(add-hook 'css-mode-hook (lambda () (rainbow-mode 1)))
+
+;; tern
+;; for javascript development (move to javascript-cfg.el?)
 (use-package tern :ensure t)
 (use-package tern-auto-complete :ensure t)
+(use-package company-tern :ensure t)
 
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (add-hook 'web-mode-hook (lambda () (tern-mode t)))

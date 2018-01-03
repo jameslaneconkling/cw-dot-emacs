@@ -31,7 +31,7 @@
 ;; you've typed in
 ;; http://www.emacswiki.org/emacs/InteractivelyDoThings
 
-(use-package ido-ubiquitous :ensure t)
+(use-package ido-completing-read+ :ensure t)
 (ido-mode t)
 
 ;; This allows partial matches, e.g. "tl" will match "Tyrion Lannister"
