@@ -11,6 +11,7 @@
 (load "navigation-cfg.el")
 (load "shell-cfg.el")
 (load "ui-cfg.el")
+(load "org-cfg.el")
 (load "on-start-cfg.el")
 
 ;;;;;;;;;;;
@@ -20,6 +21,7 @@
 (add-to-list 'load-path "~/.emacs.d/personal/lang")
 (load "go-cfg.el")
 (load "clojure-cfg.el")
+(load "sclang-cfg.el")
 (load "javascript-cfg.el")
 (load "markdown-cfg.el")
 (load "elisp-cfg.el")
@@ -28,6 +30,7 @@
 (load "forth-cfg.el")
 (load "asm-cfg.el")
 (load "brainfuck-cfg.el")
+(load "tpp-cfg.el")
 
 ;;;;;;;;;;;;;
 ;; program ;;

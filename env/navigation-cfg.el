@@ -19,6 +19,10 @@
   '(add-to-list 'dired-compress-file-suffixes 
                 '("\\.zip\\'" ".zip" "unzip")))
 
+;; set pageup/pagedown to goto next buffers
+(global-set-key (kbd "<next>") 'next-buffer)
+(global-set-key (kbd "<prior>") 'previous-buffer)
+
 ;; projectile everywhere!
 (projectile-global-mode)
 

@@ -2,6 +2,14 @@
 ;; Fonts ;;
 ;;;;;;;;;;;
 
+;; emoji support
+(use-package emojify :ensure t)
+(add-hook 'after-init-hook #'global-emojify-mode)
+(add-hook 'after-init-hook '(emojify-emoji-styles "github"))
+(setq emojify-display-style "unicode")
+
+
+
 ;;; Fira code
 ;; This works when using emacs --daemon + emacsclient
 ;; (add-hook 'after-make-frame-functions (lambda (frame) (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")))

@@ -15,4 +15,9 @@
 (kill-buffer "*Messages*")
 
 ;; open todo list
-(find-file "~/todo.org")
+(find-file "~/org/todo.org")
+
+;; open all pdfs with zathura externally instead of PDF viewer
+(use-package openwith :ensure t)
+(openwith-mode t)
+(setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
