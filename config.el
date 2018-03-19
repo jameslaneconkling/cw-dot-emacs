@@ -31,6 +31,7 @@
 (load "asm-cfg.el")
 (load "brainfuck-cfg.el")
 (load "tpp-cfg.el")
+(load "haskell-cfg.el")
 
 ;;;;;;;;;;;;;
 ;; program ;;
